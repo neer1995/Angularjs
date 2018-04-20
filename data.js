@@ -26,21 +26,34 @@ app.controller("ctrlBody",function($scope){
 		"Staying true to its commitment to keep building on the success of KWID with breakthrough "+
 		"product innovations, Renault today announced the launch of the new KWID Super Hero Edition "+
 		"in association with Marvel.";
+		
 	
 	// $scope.name = "";
 	// $scope.Email = "";
 	// $scope.MobileNumber = "";
 	
-	$scope.print = function print(mobileNumber,email,Name) {
+	$scope.print = function print(mobileNumber,email,Name,form) {
 		//console.log('I am in',  mobileNumber);
+		if(form.$valid == false)
+			window.alert("You are Entering wrong email or missing some fileds");
+		else if(mobileNumber.length != '10')
+			window.alert("Mobile number should be 10 digit");
+		else if(Name.length > '30' || Name.length < '2')//name length should be more than 2 and less than 30
+			 window.alert('Please enter correct name');
+			
+		else{
 		$scope.test1 = mobileNumber;
 		$scope.test2 = email;
 		$scope.test3 = Name;
+
+		}
 	};
+	
 	
 });
 
-app.controller('myCtrl3', function($scope, $location) {
-    $scope.myUrl = $location.absUrl();
-});
+
+
+
+
 

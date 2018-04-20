@@ -1,6 +1,6 @@
 <HTML lang="en" ng-app="myApp">
 <head>
-
+<title>Angular</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" user-scalable=no">
 <script src="angular-1.6.9/angular.js"></script>
 <link rel="stylesheet" href="css/style.css">
@@ -36,24 +36,24 @@
 <!------>
 <div class="form">
 <h3> Enter your Details</h3>
-	<form action="" method="get">
+	<form name="myForm">
 	<table class="frmTable">
 	
 	<tr>
 	
-		<td><input type="text" class="form-control" name="Name" placeholder="Enter you name" id="name" ng-model="name" required /></td>
+		<td><input type="text" class="form-control" name="Name" placeholder="Enter you name" id="name" ng-model="name" required></td>
 	
 	</tr>
 	<tr>
-		<td><input type="text" class="form-control" name="Email" placeholder ="Enter your Email" id ="email" ng-model="Email" required /></td>
+		<td><input type="email" class="form-control" name="Email" placeholder ="Enter your Email" id ="email" ng-model="Email" required></td>
 	</tr>
 	<tr>
-		<td><input type="mobile" class="form-control" name="Mobile" placeholder="Enter your Mobile Number" id="mob" ng-model="MobileNumber" required /></td>
+		<td><input type="mobile" class="form-control" name="Mobile" placeholder="Enter your Mobile Number" id="mob" ng-model="MobileNumber" required></td>
 	</tr>
 	
 		</tr>
 		</table>
-		<input type="Button"   value="Submit" ng-click="print(MobileNumber,Email, name);" style="color: 'white'; width: '40px'"/>
+		<input type="Button"   value="Submit" ng-click="print(MobileNumber,Email, name,myForm);" style="color: 'white'; width: '40px'"/>
 	</form>
 	
 	<table class="frmTable">
@@ -91,18 +91,18 @@
 
 </div>
 
-<div ng-controller = "myCtrl3">
-{{myUrl}}
-</div>
 
 
 
 
 <!---->
 </div>
-<!-----form---->
-<!-----end----->
+
 </div>
+<!-----form---->
+
+
+<!-----end----->
 
 	</div>
 	
