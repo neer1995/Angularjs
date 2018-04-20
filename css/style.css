@@ -1,0 +1,25 @@
+.wrapper{
+	background : #85C1E9;
+}
+.contain{
+	height:600px;
+}
+.frmTable{
+	padding : 10px;
+	cellspacing : 5px;
+}
+.aside{
+	float :right;
+	width :80%;
+}
+.form{
+	width : 20%;
+	float : left;
+}
+input{
+	 margin-bottom: 15px;
+    line-height: 0px;
+}
+html{
+	padding :2px;
+}
