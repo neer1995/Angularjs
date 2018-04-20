@@ -3,6 +3,7 @@
 }
 .contain{
 	height:600px;
+	
 }
 .frmTable{
 	padding : 10px;
@@ -22,4 +23,11 @@ input{
 }
 html{
 	padding :2px;
+}
+.panel-default > .panel-body {
+background-color: #ADD8E6; }
+
+.page-footer > .container-fluid
+{
+	background-color: #ADD8E6;
 }
