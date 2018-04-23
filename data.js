@@ -7,7 +7,7 @@ var app =  angular.module("myApp",[]).controller("navCtrl",function($scope, $win
 		if (target === "Login")
 		$window.open('https://stackoverflow.com/questions/37741325/how-to-submit-angular-js-form-using-ng-click', '_self');
 		else if(target == "Home")
-			$window.open('http://google.com' , '_self');
+			$window.open('#Home' , '_self');
 		else if(target == "Contact Us")
 			$window.open('http://youtube.com' , '_self');
 		else if(target == "Sitemap")
@@ -62,6 +62,7 @@ app.filter("place", function () {
 		//console.log('I am in',  mobileNumber);
 		if(form.$valid == false)
 			window.alert("You are Entering wrong email or missing some fileds");
+		
 		else if(mobileNumber.length != '10')
 			window.alert("Mobile number should be 10 digit");
 		else if(Name.length > '30' || Name.length < '2')//name length should be more than 2 and less than 30
@@ -88,6 +89,8 @@ app.filter("place", function () {
                              $anchorScroll();
                          }
                      });
+					 
+
 
 
 

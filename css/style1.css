@@ -2,13 +2,8 @@
 	background : #85C1E9;
 }
 .contain{
-	height:70%;
-	background : #85C1E9;
+	height:600px;
 	
-}
-.panel-body{
-	width: 60%;
-	float :right;
 }
 .frmTable{
 	padding : 10px;
@@ -70,18 +65,18 @@ background-color: #ADD8E6; }
 .tableData1 {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
-    width: 60%;
+    width: 100%;
 }
 
 .tableData1 td, .tableData1 th {
-   
+    border: 1px solid #ddd;
     padding: 8px;
 
 }
 
+.tableData1 tr:nth-child(even){background-color: #85B4E9;}
 
-
-
+.tableData1 tr:hover {background-color: #85B4E9;}
 
 .tableData1 th {
     padding-top: 12px;
@@ -100,17 +95,3 @@ background-color: #ADD8E6; }
     width: 25%;
 	background :#ccffff;
 }
-
-.panel-body-login{
-	
-	padding-top: 25px;
-	width:50%;
-	align :center;
-	
-}
-.tableData1{
-	align:center;
-	
-}
-
-
