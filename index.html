@@ -3,6 +3,7 @@
 <title>Angular</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" user-scalable=no">
 <script src="angular-1.6.9/angular.js"></script>
+
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -10,8 +11,11 @@
 <script src="data.js"></script>
 </head>
 <body >
-<div class="wrapper">
 
+<div class="wrapper">
+<p align="right">
+<button type="button" ng-click="scrollTo('bottom')" class="btn btn-primary btn-md">Scroll to Bottom</button>
+</p>
 <div class="container-fluid">
 	<div   ng-controller="navCtrl" class="nav"  >
 	<nav class="navbar navbar-default">
@@ -21,8 +25,9 @@
     </div>
     <ul class="nav navbar-nav">
       <li class="active" ng-repeat="op in options" ><a ng-click = "navigate(op);">{{op}}</a></li>
-
+		
     </ul>
+	
   </div>
 </nav>
 	</div>
@@ -41,7 +46,7 @@
 	
 	<tr>
 	
-		<td><input type="text" class="form-control" name="Name" placeholder="Enter you name" id="name" ng-model="name" required></td>
+		<td><input  type="text" class="form-control" name="Name" placeholder="Enter you name" id="name" ng-model="name" required></td>
 	
 	</tr>
 	<tr>
@@ -76,6 +81,11 @@
 	
 	
 	</div>
+	
+	<div class="image">
+<img ng-src={{imagepath}} alt="disney"/><br/>
+</div><br/>
+
 <!----->
 <div class="aside">
 <div class="panel panel-default">
@@ -90,13 +100,67 @@
 {{content}}
 
 </div>
+<br/>
+<div >
+
+<div class="searchBox">
+<label>Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</label><input type="text" class ="inputClass" ng-model="searchText" placeholder="Enter name to search"/>
+<label>Place:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</label><input type="text" class ="inputClass" ng-model = "searchText.place" placeholder="Enter place to search"/>
+<label>Exact Match</label><input type="checkbox" ng-model="exactMatch" ng-model = "exact"/>
+</div> 
+
+<div class ="left">
+<table class="tableData">
+	<thead>
+			<tr>
+				<th>Name</th>
+				<th>Age</th>
+				<th>Place</th>
+				
+			</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat = "employee in employees | filter :searchText">
+			<td>{{employee.name}}</td>
+			<td>{{employee.age}}</td>
+			<td>{{employee.place}}</td>
+		</tr>
+	</tbody>
+</table>
+</div>
 
 
+</div><hr/>
+<br/>
 
 
 
 <!---->
 </div>
+<div class ="left">
+<label>Hide Age</label>&nbsp;<input type="checkbox" ng-model="hideAge"/>
+<table class="tableData1">
+	<thead>
+			<tr>
+				<th>Name</th>
+				<th ng-hide ="hideAge" >Age</th>
+				<th ng-show ="hideAge" >Age</th>
+				<th>Place</th>
+				
+			</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat = "employee in employees">
+			<td>{{employee.name}}</td>
+			<td ng-hide ="hideAge">{{employee.age }}</td>
+			<td ng-show ="hideAge">##</td>
+			<td>{{employee.place | place}}</td>
+		</tr>
+	</tbody>
+</table>
+</div><br/>
 
 </div>
 <!-----form---->
@@ -155,7 +219,9 @@
         <a href="https://mdbootstrap.com/material-design-for-bootstrap/"> MDBootstrap.com </a>
     </div>
     <!--/.Copyright-->
-
+<p align="right">
+<button type="button"ng-click="scrollTo('top')" class="btn btn-primary btn-md">Scroll to Top</button>
+</p>
 </footer>
 <!--/.Footer-->
 </body>

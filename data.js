@@ -18,7 +18,27 @@ var app =  angular.module("myApp",[]).controller("navCtrl",function($scope, $win
 
 	}); 
 	
-app.controller("ctrlBody",function($scope){
+app.filter("place", function () {
+            return function (place) {
+                switch (place) {
+                    case 1:
+                        return "Noida";
+                    case 2:
+                        return "Delhi";
+                    case 3:
+                        return "Not disclosed";
+                }
+            }
+        });
+		
+		app.controller("ctrlBody",function($scope, $location, $anchorScroll){
+			
+			$scope.scrollTo = function (scrollLocation) {
+                             $location.hash(scrollLocation);
+                             $anchorScroll.yOffset = 20;
+                             $anchorScroll();
+			}
+			
 	$scope.content = "Renault India, one of the fastest" +
 	"growing automotive brands in India, created history with its Global car for Conquest,"+
 		"Renault KWID. This Attractive, Innovative and Affordable car, is a true game-changer and "+
@@ -26,8 +46,18 @@ app.controller("ctrlBody",function($scope){
 		"Staying true to its commitment to keep building on the success of KWID with breakthrough "+
 		"product innovations, Renault today announced the launch of the new KWID Super Hero Edition "+
 		"in association with Marvel.";
+		$scope.imagepath = "images/disney.jpg";
 		
-	
+		var employees = [
+						{name : "Neeraj Kumar", age : 22, place : 1},
+						{name : "Rajesh pal", age :20, place : 1 },
+						{name : "Pallavi", age : 23, place : 2},
+						{name : "Meenakshi", age : 22, place : 3}
+			];
+		  $scope.employees = employees;
+		  
+		  
+		  
 	// $scope.name = "";
 	// $scope.Email = "";
 	// $scope.MobileNumber = "";
@@ -48,7 +78,6 @@ app.controller("ctrlBody",function($scope){
 
 		}
 	};
-	
 	
 	
 	
