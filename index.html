@@ -13,9 +13,7 @@
 <body >
 
 <div class="wrapper">
-<p align="right">
-<button type="button" ng-click="scrollTo('bottom')" class="btn btn-primary btn-md">Scroll to Bottom</button>
-</p>
+
 <div class="container-fluid">
 	<div   ng-controller="navCtrl" class="nav"  >
 	<nav class="navbar navbar-default">
@@ -219,9 +217,11 @@
         <a href="https://mdbootstrap.com/material-design-for-bootstrap/"> MDBootstrap.com </a>
     </div>
     <!--/.Copyright-->
+<div ng-controller="scrollCtrl">
 <p align="right">
-<button type="button"ng-click="scrollTo('top')" class="btn btn-primary btn-md">Scroll to Top</button>
+<button type="button" ng-click="scrollTo('top')" class="btn btn-primary btn-md">Scroll to Top</button>
 </p>
+</div>
 </footer>
 <!--/.Footer-->
 </body>

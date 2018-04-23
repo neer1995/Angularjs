@@ -31,13 +31,9 @@ app.filter("place", function () {
             }
         });
 		
-		app.controller("ctrlBody",function($scope, $location, $anchorScroll){
+		app.controller("ctrlBody",function($scope){
 			
-			$scope.scrollTo = function (scrollLocation) {
-                             $location.hash(scrollLocation);
-                             $anchorScroll.yOffset = 20;
-                             $anchorScroll();
-			}
+			
 			
 	$scope.content = "Renault India, one of the fastest" +
 	"growing automotive brands in India, created history with its Global car for Conquest,"+
@@ -83,6 +79,15 @@ app.filter("place", function () {
 	
 });
 
+
+                   app.controller("scrollCtrl", function
+                         ($scope, $location, $anchorScroll) {
+                         $scope.scrollTo = function (scrollLocation) {
+                             $location.hash(scrollLocation);
+                             $anchorScroll.yOffset = 20;
+                             $anchorScroll();
+                         }
+                     });
 
 
 
