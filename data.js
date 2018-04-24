@@ -5,7 +5,7 @@ var app =  angular.module("myApp",[]).controller("navCtrl",function($scope, $win
 	
 	$scope.navigate = function navigate(target) {
 		if (target === "Login")
-		$window.open('https://stackoverflow.com/questions/37741325/how-to-submit-angular-js-form-using-ng-click', '_self');
+		$window.open('login.html', '_self');
 		else if(target == "Home")
 			$window.open('#Home' , '_self');
 		else if(target == "Contact Us")

@@ -5,9 +5,9 @@ var app =  angular.module("loginApp",[]).controller("Ctrl",function($scope, $win
 	
 	$scope.navigate = function navigate(target) {
 		if (target === "Login")
-		$window.open('https://stackoverflow.com/questions/37741325/how-to-submit-angular-js-form-using-ng-click', '_self');
+		$window.open('login.html', '_self');
 		else if(target == "Home")
-			$window.open('#Home' , '_self');
+			$window.open('index.html' , '_self');
 		else if(target == "Contact Us")
 			$window.open('http://youtube.com' , '_self');
 		else if(target == "Sitemap")
@@ -16,13 +16,24 @@ var app =  angular.module("loginApp",[]).controller("Ctrl",function($scope, $win
 			console.log('error');
 	};
 	
-	$scope.email = "nkumar@gmail.com";
-	$scope.password = "123456789";
-	$scope.loginFun = function(name,password){
-		if(name == "nkumar@gmail.com" || password == 123456789)
+	$scope.email = "";
+	$scope.password = "";
+	$scope.loginFun = function(email,password){
+		if(email == "nkumar@gmail.com" && password == 123456789)
+		{
 			 $window.location.href = 'index.html';
+		}
+		else if(email.length="")
+		{
+			window.alert("enter email");
+		}
+		else if(email == "disney@gmail.com" && password == 789456123)
+		{
+			 $window.location.href = 'index.html';
+		}
+		
 		else
-		window.alert("wrong email/password");
+		window.alert("Enter email & password/wrong email/password");
 	}
 	
 

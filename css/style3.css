@@ -1,0 +1,116 @@
+.wrapper{
+	background : #85C1E9;
+}
+.contain{
+	height:50%;
+	background : #85C1E9;
+	
+}
+.panel-body{
+	width: 60%;
+	float :right;
+}
+.frmTable{
+	padding : 10px;
+	cellspacing : 5px;
+}
+.aside{
+	float :right;
+	width :80%;
+}
+.form{
+	width : 20%;
+	float : left;
+}
+input{
+	 margin-bottom: 15px;
+    line-height: 0px;
+}
+html{
+	padding :2px;
+}
+.panel-default > .panel-body {
+background-color: #ADD8E6; }
+
+.page-footer > .container-fluid
+{
+	background-color: #ADD8E6;
+}
+
+
+
+.tableData {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.tableData td, .tableData th {
+    border: 1px solid #ddd;
+    padding: 8px;
+
+}
+
+.tableData tr:nth-child(even){background-color: #ADD8E6;}
+
+.tableData tr:hover {background-color: #ADD8E6;}
+
+.tableData th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #ADD8E6;
+    color: white;
+	
+}
+
+
+
+
+.tableData1 {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 60%;
+}
+
+.tableData1 td, .tableData1 th {
+   
+    padding: 8px;
+
+}
+
+
+
+
+
+.tableData1 th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #85B4E9;
+    color: white;
+	
+}
+
+
+
+.inputClass{
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 25%;
+	background :#ccffff;
+}
+
+.panel-body-login{
+	
+	padding-top: 25px;
+	width:50%;
+	align :center;
+	
+}
+.tableData1{
+	align:center;
+	
+}
+
+
